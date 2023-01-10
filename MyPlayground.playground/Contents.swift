@@ -33,6 +33,11 @@ myDog.ratioOfLengthHeight
 struct Book {
     var numberOfPages: Int
     var heightInInches: Double
-    var thicknessInCentimetres: Double
+    var thicknessInInches: Double
+    var lengthInInches: Double
+    
+    var volumeInCubicInches: Double {
+        heightInInches * thicknessInInches * lengthInInches
+    }
 }
 
