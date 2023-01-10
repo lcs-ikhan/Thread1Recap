@@ -14,14 +14,20 @@ struct Dog {
     var heightInCentimetres: Double {
         return heightInMetres * 100
     }
-    var lengthInCetimetres: Double {
+    var lengthInCentimetres: Double {
         lengthInMetres * 100
     }
     var ratioOfLengthHeight: Double{
-        lengthInMetres * heightInMetres
+        (lengthInMetres + heightInMetres) / 2
     }
 }
 
-struct myDog = Dog(breed: "German Shephard", color: "Yellowish Oragne", heightInMetres: 3, lengthInMetres: 1.5, massInPounds: 200, ageInYears: 13, birthday: "Feb 17")
+var myDog = Dog(breed: "German Shephard", color: "Yellowish Oragne", heightInMetres: 3, lengthInMetres: 1.5, massInPounds: 200, ageInYears: 13, birthday: "Feb 17")
 
-myDog.heightInMeters
+myDog.heightInMetres
+myDog.heightInCentimetres
+myDog.lengthInMetres
+myDog.lengthInCentimetres
+myDog.ratioOfLengthHeight
+
+
